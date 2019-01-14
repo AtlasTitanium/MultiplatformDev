@@ -387,7 +387,8 @@ PlayerSettings:
     - OpenVR
   - m_BuildTarget: Android
     m_Enabled: 1
-    m_Devices: []
+    m_Devices:
+    - None
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
@@ -744,9 +745,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: 4a04c354-3a2d-4e66-86e2-b0179dddb772
+  projectName: PokemonSnap_MPD
+  organizationId: spyrokid77-gmail-com
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

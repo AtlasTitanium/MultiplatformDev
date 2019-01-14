@@ -1,31 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
+using UnityEngine.Networking;
 
 public class StartUpScript : MonoBehaviour {
-
-	public GameObject vrPrefab;
-	public GameObject phonePrefab;
-	public GameObject editorPrefab;
-	public GameObject TestObject;
+	private GameObject player;
+	public GameObject playerPrefab;
+	private GameObject Vr;
+	private GameObject Mobile;
+	public GameObject vrStartLocation;
+	public GameObject phoneStartLocation;
 	public GameObject mainCamera;
+	public GameObject NetworkObject;
 	void Start () {
 		#if UNITY_EDITOR
-		Instantiate(editorPrefab, transform.position, transform.rotation);
-		mainCamera.SetActive(false);
+		player = Instantiate(playerPrefab, transform.position, vrStartLocation.transform.rotation);
+		Vr = player.transform.GetChild(0).gameObject;
+		Mobile = player.transform.GetChild(1).gameObject;
+		Mobile.SetActive(false);
       	Debug.Log("Unity Editor");
-		TestObject.GetComponent<Renderer>().material.color = Color.blue;
+		  
 		#elif UNITY_STANDALONE_WIN
-		Instantiate(vrPrefab, transform.position, transform.rotation);
-		mainCamera.SetActive(false);
+		player = Instantiate(playerPrefab, transform.position, vrStartLocation.transform.rotation);
+		Vr = player.transform.GetChild(0).gameObject;
+		Mobile = player.transform.GetChild(1).gameObject;
+		Mobile.SetActive(false);
 		Debug.Log("Stand Alone Windows");
-		TestObject.GetComponent<Renderer>().material.color = Color.red;
+
 		#elif UNITY_ANDROID
-		Instantiate(phonePrefab, transform.position, transform.rotation);
-		XRSettings.enabled = false;
+		player = Instantiate(playerPrefab, transform.position, phoneStartLocation.transform.rotation);
+		Vr = player.transform.GetChild(0).gameObject;
+		Mobile = player.transform.GetChild(1).gameObject;
 		Debug.Log("Iphone");
-		TestObject.GetComponent<Renderer>().material.color = Color.green;
+		Vr.SetActive(false);
 		#endif
 	}
 }

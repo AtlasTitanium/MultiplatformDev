@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - NewCamera
+  - projectile
+  - FxTemporaire
+  - VrWait
+  - MobileWait
+  - VrStart
+  - VrEnd
+  - MobileStart
+  - MobileEnd
   layers:
   - Default
   - TransparentFX
@@ -15,7 +23,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - Head
   - 
   - 
   - 
