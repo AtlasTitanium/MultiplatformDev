@@ -13,6 +13,7 @@ TagManager:
   - VrEnd
   - MobileStart
   - MobileEnd
+  - Debug
   layers:
   - Default
   - TransparentFX
