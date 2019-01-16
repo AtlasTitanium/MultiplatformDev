@@ -14,6 +14,8 @@ TagManager:
   - MobileStart
   - MobileEnd
   - Debug
+  - VR
+  - MOBILE
   layers:
   - Default
   - TransparentFX

@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class StartTarget : NetworkBehaviour {
+public class StartTarget : MonoBehaviour {
 
 	public Material TargetOff;
 	public Material TargetOn;
@@ -13,9 +12,10 @@ public class StartTarget : NetworkBehaviour {
 		this.GetComponent<Renderer>().material = TargetOff;
 	}
 
-	[Command]
-	public void CmdHitTarget(){
-		active = true;
-		this.GetComponent<Renderer>().material = TargetOn;
-	}
+	void OnCollisionEnter (Collision col){
+        if(col.gameObject.GetComponent<Candy>()){
+			this.GetComponent<Renderer>().material = TargetOff;
+			active = true;
+		}
+    }
 }

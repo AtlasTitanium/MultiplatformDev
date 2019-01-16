@@ -141,10 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4909232578205878}
-  - component: {fileID: 114955402426495042}
-  - component: {fileID: 114685696881066938}
-  - component: {fileID: 114671128746450586}
-  - component: {fileID: 114474149890977190}
+  - component: {fileID: 114491597659794654}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -537,7 +534,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1517917680649776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23262787, y: 0.5, z: -0.019080162}
+  m_LocalPosition: {x: 452.91, y: 173.82, z: 130.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4055953183848890}
@@ -1080,7 +1077,7 @@ MonoBehaviour:
   verbose: 0
   createComponents: 1
   updateDynamically: 1
---- !u!114 &114474149890977190
+--- !u!114 &114491597659794654
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1088,19 +1085,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 1517917680649776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: de501315c36948b448490d0124415c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
+  Vr: {fileID: 1991609598926760}
+  Mobile: {fileID: 1477668251832682}
+  StartPos: {fileID: 0}
+  Positions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  WaitArea: {fileID: 0}
+  Target: {fileID: 0}
+  speed: 50
 --- !u!114 &114501962268543440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1159,38 +1185,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Valve.VR.SteamVR_Behaviour_PoseEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114671128746450586
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1517917680649776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a55b5ffdaaece84b821c14a0e4c6f04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Button: {fileID: 2800000, guid: 57d3c9144acae8d4c8c9c7cef853bd5d, type: 3}
-  inpField: {fileID: 2800000, guid: 1d9f3a9664bde0b46996e0824ffb268b, type: 3}
-  Background: {fileID: 2800000, guid: 3fb6c8079b8380e47bf5bf5131cf90cd, type: 3}
---- !u!114 &114685696881066938
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1517917680649776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc6fc63d300df95479908acd4b850ddd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114700011418800708
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1477668251832682}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff0ca02ef79f03f4d8d3ab18686d5e27, type: 3}
   m_Name: 
@@ -1261,38 +1262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55db8f265a85c9a4f9a69a700bc06c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114955402426495042
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1517917680649776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 120
-    i1: 63
-    i2: 0
-    i3: 6
-    i4: 253
-    i5: 62
-    i6: 140
-    i7: 4
-    i8: 56
-    i9: 155
-    i10: 200
-    i11: 232
-    i12: 192
-    i13: 243
-    i14: 53
-    i15: 20
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
 --- !u!114 &114988495445620910
 MonoBehaviour:
   m_ObjectHideFlags: 1

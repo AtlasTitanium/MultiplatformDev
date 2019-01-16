@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33252043393366664}
   - component: {fileID: 23653429259550766}
   - component: {fileID: 135133934117342952}
-  - component: {fileID: 114160313206891128}
-  - component: {fileID: 114176319156460872}
+  - component: {fileID: 54061535078627066}
+  - component: {fileID: 114106727874060032}
   m_Layer: 0
   m_Name: Candy
   m_TagString: Untagged
@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576383328280200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.0115957, y: -3.8830094, z: -4.370221}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -86,7 +86,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576383328280200}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114160313206891128
+--- !u!54 &54061535078627066
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576383328280200}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &114106727874060032
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,51 +109,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1576383328280200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 541dbeeeb0fae24448a9b1aebcb5cb62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 79
-    i1: 105
-    i2: 13
-    i3: 33
-    i4: 244
-    i5: 205
-    i6: 229
-    i7: 84
-    i8: 138
-    i9: 255
-    i10: 246
-    i11: 76
-    i12: 102
-    i13: 49
-    i14: 37
-    i15: 241
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
---- !u!114 &114176319156460872
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1576383328280200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
+  lifetimeSeconds: 10
 --- !u!135 &135133934117342952
 SphereCollider:
   m_ObjectHideFlags: 1
