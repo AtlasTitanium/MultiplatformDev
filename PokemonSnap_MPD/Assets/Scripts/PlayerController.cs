@@ -13,21 +13,25 @@ public class PlayerController : MonoBehaviour {
 	private float journeyLength;
 	private bool journeying;
 	private int countingPositions = 0;
-	public float speed = 2.0f;
+	public float speed = 5.0f;
 	private Vector3 currenPos;
-	void Start(){
+	public List<GameObject> pictures = new List<GameObject>();
+
+	public LayerMask targetMask;
+    public LayerMask obstacleMask;
+	void Awake(){
 		#if UNITY_STANDALONE_WIN
 		Mobile.SetActive(false);
-		StartPos.position = new Vector3(StartPos.position.x, StartPos.position.y, StartPos.position.z);
+		StartPos.position = new Vector3(StartPos.position.x, StartPos.position.y-1, StartPos.position.z);
 		for(int i = 0; i < Positions.Count; i++){
-			Positions[i].position = new Vector3(Positions[i].position.x, Positions[i].position.y, Positions[i].position.z);
+			Positions[i].position = new Vector3(Positions[i].position.x, Positions[i].position.y-1, Positions[i].position.z);
 		}
 		#elif UNITY_ANDROID
-		StartPos.position = new Vector3(StartPos.position.x, StartPos.position.y + 4, StartPos.position.z);
-		for(int i = 0; i < Positions.Count; i++){
-			Positions[i].position = new Vector3(Positions[i].position.x, Positions[i].position.y + 5, Positions[i].position.z);
-		}
 		Vr.SetActive(false);
+		StartPos.position = new Vector3(StartPos.position.x, StartPos.position.y + 2, StartPos.position.z);
+		for(int i = 0; i < Positions.Count; i++){
+			Positions[i].position = new Vector3(Positions[i].position.x, Positions[i].position.y + 2, Positions[i].position.z);
+		}
 		#endif
 	}
 
@@ -56,6 +60,15 @@ public class PlayerController : MonoBehaviour {
 				journeyLength = Vector3.Distance(currenPos, Positions[countingPositions].position);
 				startTime = Time.time;
 			}
+		}
+	}
+
+	void OnGUI(){
+		GUIStyle text = new GUIStyle();
+		text.fontSize = Screen.height/10;
+		GUI.Box(new Rect(0,0,Screen.width/4,Screen.height/8),"amount of picture: "+pictures.Count,text);
+		if(pictures.Count >= 1){
+			GUI.Box(new Rect(0,Screen.height/8,Screen.width/4,Screen.height/8),"poke in last picture: "+pictures[pictures.Count - 1].GetComponent<Picture>().amountInPic,text);
 		}
 	}
 }

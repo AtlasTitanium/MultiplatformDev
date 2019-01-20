@@ -16,6 +16,7 @@ TagManager:
   - Debug
   - VR
   - MOBILE
+  - Pokemans
   layers:
   - Default
   - TransparentFX
@@ -27,10 +28,10 @@ TagManager:
   - 
   - PostProcessing
   - Head
-  - 
-  - 
-  - 
-  - 
+  - Flash
+  - Candy
+  - Obstacle
+  - Pokeman
   - 
   - 
   - 
